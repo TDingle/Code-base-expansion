@@ -142,11 +142,8 @@ public class Boid : MonoBehaviour
     private void shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-        Debug.Log("1");
         Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
-        Debug.Log("2");
         bulletRb.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
-        Debug.Log("3");
 
 
     }

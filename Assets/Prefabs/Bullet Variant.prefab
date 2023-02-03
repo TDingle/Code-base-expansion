@@ -12,6 +12,14 @@ PrefabInstance:
       value: Bullet Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4043345655953045781, guid: 02dc501ae562543c29639da4b53c9dca, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043345655953045781, guid: 02dc501ae562543c29639da4b53c9dca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043345655953045781, guid: 02dc501ae562543c29639da4b53c9dca, type: 3}
       propertyPath: m_TagString
       value: EnemyBullet
       objectReference: {fileID: 0}
@@ -62,6 +70,10 @@ PrefabInstance:
     - target: {fileID: 4043345655953045783, guid: 02dc501ae562543c29639da4b53c9dca, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043345657530299662, guid: 02dc501ae562543c29639da4b53c9dca, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02dc501ae562543c29639da4b53c9dca, type: 3}

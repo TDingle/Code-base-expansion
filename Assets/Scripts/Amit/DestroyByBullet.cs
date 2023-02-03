@@ -11,6 +11,7 @@ public class DestroyByBullet : MonoBehaviour
     {
         if (other.tag == "Bullet")
         {
+            
             Destroy(gameObject);
             if (destroyBullet)
             {
