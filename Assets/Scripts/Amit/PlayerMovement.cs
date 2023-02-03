@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 playerPos;
     private bool allowDash = true;
     private bool dashing;
-    private float dashP = 15f;
+    private float dashP = 30f;
     private float DashTime = .2f;
     private float dashingCooldown = 1f;
     
@@ -28,8 +28,8 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
+        playerPos.x = Input.GetAxisRaw("Horizontal");
+        playerPos.y = Input.GetAxisRaw("Vertical");
         if (Input.GetKeyDown(KeyCode.LeftShift) && allowDash)
         {
             StartCoroutine(Dash());
@@ -51,9 +51,8 @@ public class PlayerMovement : MonoBehaviour
     {
         allowDash = false;
         dashing = true;
-        myRigidBody.velocity = new Vector2(transform.localScale.x + dashP, 0f);
-     
-       
+        myRigidBody.velocity += (playerPos * dashP);
+  
         yield return new WaitForSeconds(DashTime);
         dashing = false;
         yield return new WaitForSeconds(dashingCooldown);

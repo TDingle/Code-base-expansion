@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866f6a69aadb4634085d9390c6a771d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6129434338568200203, guid: a1e50e6b26f3842d9a8518492ba42f26, type: 3}
   maxSpeed: 15
   deadBoidPrefab: {fileID: 7947499493830985515, guid: d91edb65055d118ec9476600370fd51d, type: 3}
   SeparationMultiplier: 1.5
@@ -169,7 +170,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

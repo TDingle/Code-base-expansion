@@ -11,6 +11,8 @@ public interface IBoid
 public class Boid : MonoBehaviour
 {
     private Rigidbody2D rBody;
+    [SerializeField] GameObject bulletPrefab;
+    float bulletSpeed = 20f;
 
     [SerializeField]
     private float maxSpeed = 10;
@@ -64,6 +66,14 @@ public class Boid : MonoBehaviour
     private void Awake()
     {
         rBody = GetComponent<Rigidbody2D>();
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            shoot();
+            //Debug.Log("Update");
+        }
     }
 
     public void Initialize(System.Action<Boid> onDes)
@@ -128,5 +138,16 @@ public class Boid : MonoBehaviour
             }
 
         }
+    }
+    private void shoot()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        Debug.Log("1");
+        Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
+        Debug.Log("2");
+        bulletRb.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
+        Debug.Log("3");
+
+
     }
 }
